@@ -1,0 +1,9 @@
+CREATE DATABASE TestApp
+USE [TestApp]
+CREATE TABLE TestItems(
+Id INT IDENTITY(1,1),
+ItemName VARCHAR(50),
+ItemPrice FLOAT
+)
+DROP TABLE TestItem
+SELECT * FROM TestItems

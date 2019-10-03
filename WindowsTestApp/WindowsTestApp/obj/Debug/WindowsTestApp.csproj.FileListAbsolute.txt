@@ -1,0 +1,11 @@
+D:\.net-project\WindowsTestApp\WindowsTestApp\bin\Debug\WindowsTestApp.exe.config
+D:\.net-project\WindowsTestApp\WindowsTestApp\bin\Debug\WindowsTestApp.exe
+D:\.net-project\WindowsTestApp\WindowsTestApp\bin\Debug\WindowsTestApp.pdb
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.Home.resources
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.ItemUi.resources
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.Properties.Resources.resources
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.csproj.GenerateResource.cache
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.csproj.CoreCompileInputs.cache
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.exe
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.pdb
+D:\.net-project\WindowsTestApp\WindowsTestApp\obj\Debug\WindowsTestApp.csprojAssemblyReference.cache
