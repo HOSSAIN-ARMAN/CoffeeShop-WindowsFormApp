@@ -75,12 +75,15 @@ namespace WindowsTestApp
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(idTextBox.Text))
-            {
-                MessageBox.Show("Delete Id Can Not Be Empty");
-                return;
-            }
-            _testItem.Id = Convert.ToInt32(idTextBox.Text);
+            //if (string.IsNullOrEmpty(idTextBox.Text))
+            //{
+            //    MessageBox.Show("Delete Id Can Not Be Empty");
+            //    return;
+            //}
+
+            _testItem.Id = Convert.ToInt32(itemComboBox.SelectedValue);
+            
+           
             if (_itemManager.Delete(_testItem))
             {
                 displayDataGridView.DataSource = _itemManager.InstantDisplayData();
@@ -134,5 +137,9 @@ namespace WindowsTestApp
             itemPriceTextBox.Text = displayDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
+        private void ItemUi_Load(object sender, EventArgs e)
+        {
+            itemComboBox.DataSource = _itemManager.ItemComboBox();
+        }
     }
 }

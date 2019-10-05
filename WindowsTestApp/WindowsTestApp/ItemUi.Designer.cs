@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,9 +39,11 @@
             this.updateButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.displayDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.idTextBox = new System.Windows.Forms.TextBox();
+            this.itemComboBox = new System.Windows.Forms.ComboBox();
+            this.testItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.displayDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -134,29 +137,36 @@
             this.displayDataGridView.TabIndex = 3;
             this.displayDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DisplayDataGridView_CellContentClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Id";
-            // 
             // idTextBox
             // 
             this.idTextBox.Location = new System.Drawing.Point(146, 31);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 5;
+            this.idTextBox.Visible = false;
+            // 
+            // itemComboBox
+            // 
+            this.itemComboBox.DataSource = this.testItemBindingSource;
+            this.itemComboBox.DisplayMember = "ItemName";
+            this.itemComboBox.FormattingEnabled = true;
+            this.itemComboBox.Location = new System.Drawing.Point(374, 74);
+            this.itemComboBox.Name = "itemComboBox";
+            this.itemComboBox.Size = new System.Drawing.Size(121, 21);
+            this.itemComboBox.TabIndex = 6;
+            this.itemComboBox.ValueMember = "Id";
+            // 
+            // testItemBindingSource
+            // 
+         
             // 
             // ItemUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.itemComboBox);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.displayDataGridView);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.updateButton);
@@ -169,7 +179,9 @@
             this.Controls.Add(this.label2);
             this.Name = "ItemUi";
             this.Text = "Item Information";
+            this.Load += new System.EventHandler(this.ItemUi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.displayDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testItemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +198,8 @@
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView displayDataGridView;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.ComboBox itemComboBox;
+        private System.Windows.Forms.BindingSource testItemBindingSource;
     }
 }

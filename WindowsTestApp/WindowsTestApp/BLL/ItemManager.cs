@@ -39,5 +39,10 @@ namespace WindowsTestApp.BLL
         {
             return _itemRepository.Search(testItem);
         }
+
+        public DataTable ItemComboBox()
+        {
+            return _itemRepository.ItemComboBox();
+        }
     }
 }

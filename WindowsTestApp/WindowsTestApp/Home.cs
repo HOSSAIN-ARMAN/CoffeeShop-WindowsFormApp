@@ -16,5 +16,17 @@ namespace WindowsTestApp
         {
             InitializeComponent();
         }
+
+        private void ItemInfoButton_Click(object sender, EventArgs e)
+        {
+            ItemUi itemUi = new ItemUi();
+            itemUi.Show();
+        }
+
+        private void CustomerInfoButton_Click(object sender, EventArgs e)
+        {
+            CustomerInfoForm customerInfoForm = new CustomerInfoForm();
+            customerInfoForm.Show();
+        }
     }
 }

@@ -16,7 +16,9 @@ namespace WindowsTestApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ItemUi());
+            Application.Run(new Home());
+            //Application.Run(new CustomerInfoForm());
+            //Application.Run(new ItemUi());
         }
     }
 }

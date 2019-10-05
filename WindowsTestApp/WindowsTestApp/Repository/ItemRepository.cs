@@ -187,5 +187,19 @@ namespace WindowsTestApp.Repository
             }
             return dataTable;
         }
+        public DataTable ItemComboBox()
+        {
+            string connection = @"Server = DESKTOP-CUF3262; DataBase = TestApp; Integrated Security = True";
+            SqlConnection sqlConnection = new SqlConnection(connection);
+            string query = @"SELECT Id, ItemName FROM TestItems";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+
+            sqlConnection.Close();
+            return dataTable;
+        }
     }
 }
